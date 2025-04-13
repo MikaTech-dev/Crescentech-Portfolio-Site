@@ -14,6 +14,14 @@
             box-sizing: border-box;
             font-family: "Lato", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
+
+        *:focus {
+            outline: 2px solid #d8b4fa;
+        }
+
+        *::selection {
+            background: #d8b4fa
+        }
         
         body {
             color: #333;
@@ -28,8 +36,14 @@
         }
         
         .logo img {
-            width: 10%;
-            height: 80%;
+            width: 100px;
+            height: auto;
+        }
+        
+        @media (max-width: 600px) {
+            .logo img {
+                width: 150px;
+            }
         }
         
         h1 {
@@ -42,6 +56,8 @@
             font-size: 1.2rem;
             color: rgb(233, 204, 255);
             margin-bottom: 2rem;
+            width: 80%;
+            justify-self: center;
         }
         
         /* Showcase section */
@@ -103,7 +119,7 @@
             border-radius: 10px;
         }
 
-        .showcase-item p {
+        .showcase-item-subhead {
             font-size: 0.875rem;
             line-height: 1.25rem;
             margin-bottom: 1rem;
@@ -119,22 +135,28 @@
         .showcase-item li:before {
             content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(88, 28, 135)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-4 h-4 text-purple-600 mr-2"><path d="m9 18 6-6-6-6"></path></svg>');
             position: absolute;
-            left: 0;
+            left: 2%;
             top: 70%;
             transform: translateY(-50%);
         }
         
         .features {
             margin: 1rem 0;
-            padding-left: 1.5rem;
         }
         
         .features li {
-            font-size: 0.875rem;
+            font-size: 12px;
             line-height: 1.25rem;
             margin-bottom: 0.5rem;
         }
-        
+
+        .features-title {
+            font-size: 12px;
+            color: rgb(88, 28, 135);
+            font-weight: 600;
+            margin-bottom: -10px;
+        }
+
         .demo-btn {
             display: block;
             width: 100%;
@@ -253,13 +275,34 @@
             color: rgb(233, 204, 255);
             font-style: italic;
         }
+
+        .logo {
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .bonus-features {
+            font-size: 12px;
+            font-weight: 400;
+            color: rgb(6, 173, 120);
+            margin-top: 12px;
+        }
+
+        .bonus-features li:before {
+            content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="rgb(5, 150, 105)" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z"/></svg>');
+            position: absolute;
+            left: 2%;
+            top: 70%;
+            transform: translateY(-50%);
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
             <img src=".//img/Ctech logo.PNG" alt="Cresentech logo">
-            </svg>
         </div>
         <h1>Cresentech</h1>
         <p class="tagline">Crafting exceptional web experiences with modern technology and innovative design</p>
@@ -281,11 +324,20 @@
                     <span class="text-sm font-semibold text-purple-600">Basic</span>
                 </div>
                 <h3>Basic Business Website</h3>
-                <p>Simple yet professional business website with essential features.</p>
+                <p class="showcase-item-subhead">Simple yet professional business website with essential features.</p>
+                <p class="features-title">Core Features:</p>
                 <ul class="features">
+                    <li>Basic SEO Setup</li>
+                    <li>Social Media Links</li>
+                    <li>Product Listings and Reviews</li>
                     <li>Simple, Modern, Effortless Design</li>
                     <li>Checkout and Paystack Integration</li>
-                    <li>Product Listings and Reviews</li>
+                </ul>
+                <p class="features-title">Bonus Features:</p>
+                <ul class="bonus-features">
+                    <li>Free Logo Redesign</li>
+                    <li>Free Speed Optimization</li>
+                    <li>Free Custom Placeholder</li>
                 </ul>
                 <a href="https://cresentech-showcase-ts1.vercel.app/" target="_blank" class="demo-btn">View Demo</a>
             </div>
@@ -298,11 +350,21 @@
                     <span class="text-sm font-semibold text-purple-600">Advanced</span>
                 </div>
                 <h3>Advanced Car Dealer Platform</h3>
-                <p>Feature-rich rental management system with user authentication.</p>
+                <p class="showcase-item-subhead">Feature-rich rental management system with user authentication.</p>
+                <p class="features-title">Core Features:</p>
                 <ul class="features">
-                    <li>User Authentication</li>
-                    <li>Search & Filter</li>
+                    <li>Contact us Page</li>
+                    <li>Newsletter System</li>
+                    <li>Limited Time Offers</li>
+                    <li>Customized About Page</li>
                     <li>Inspection Booking System</li>
+                </ul>
+                <p class="features-title">Bonus Features:</p>
+                <ul class="bonus-features">
+                    <li>Free Logo Redesign</li>
+                    <li>Free Speed Optimization</li>
+                    <li>Free Custom Placeholder</li>
+                    <li>Priority Support (48hr response time)</li>
                 </ul>
                 <a href="https://cresentech-showcase-dealer2.vercel.app/" target="_blank" class="demo-btn">View Demo</a>
             </div>
@@ -315,11 +377,22 @@
                     <span class="text-sm font-semibold text-purple-600">Enterprise</span>
                 </div>
                 <h3>Enterprise Car Rental Solution</h3>
-                <p>Comprehensive dealer management system with advanced features.</p>
+                <p class="showcase-item-subhead">Comprehensive dealer management system with advanced features.</p>
+                <p class="features-title">Core Features:</p>
                 <ul class="features">
-                    <li>User Signup, Login and Dashboard</li>
-                    <li>Review</li>
+                    <li>Mobile and Desktop Optimization</li>
                     <li>Comprehensive Animations</li>
+                    <li>Store Location Integration</li>
+                    <li>Functional Dashboard</li>
+                    <li>User Authentication</li>
+                </ul>
+                <p class="features-title">Bonus Features:</p>
+                <ul class="bonus-features">
+                    <li>Free Logo Redesign</li>
+                    <li>Free Speed Optimization</li>
+                    <li>Free Custom Placeholder</li>
+                    <li>Priority Support (48hr response time)</li>
+                    <li>Free Email Template (Branded Email Template)</li>
                 </ul>
                 <a href="https://cresentech-showcase-dealer3.vercel.app/" target="_blank" class="demo-btn">View Demo</a>
             </div>
