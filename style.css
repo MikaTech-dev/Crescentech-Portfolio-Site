@@ -66,6 +66,9 @@
      .logo img {
          width: 120px;
      }
+     .features li, .bonus-features li {
+         font-size: 14px !important;
+     }
  }
  
  h1 {
