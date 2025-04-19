@@ -69,6 +69,10 @@
      .features li, .bonus-features li {
          font-size: 14px !important;
      }
+     .why-choose-container svg {
+        width: 50px !important;
+        height: 50px !important;
+     }
  }
  
  h1 {
@@ -359,3 +363,45 @@
      -webkit-user-drag: none;
      -webkit-touch-callout: none;
  }
+
+ 
+ .why-choose-container {
+    width: 80%;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem 4rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+    margin: 2rem 0;
+    animation: slideFadeIn 1s ease-out;
+}
+
+.why-choose {
+    max-width: 800px;
+    text-align: center;
+}
+
+.reasons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.reason {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reason p {
+    margin: 0;
+    text-align: left;
+}
+
+.reason p:before {
+    content: attr(data-main-text);
+    display: block;
+    font-weight: bold;
+}
